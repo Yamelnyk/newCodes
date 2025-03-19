@@ -5,26 +5,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let progress = 0;
   let maxProgress = 100;
-  let circleDelay = 200;
-  let progressInterval = 40;
-  let progressStep =
-    maxProgress / (circles.length * (circleDelay / progressInterval));
+  let totalCircles = circles.length;
+  let duration = 4000;
 
-  circles.forEach((circle, index) => {
-    setTimeout(() => {
-      circle.style.opacity = '1';
-      circle.style.transform = 'scale(1)';
-      circle.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-    }, index * circleDelay);
-  });
+  let startTime = null;
 
-  let loadingInterval = setInterval(() => {
-    if (progress >= maxProgress) {
-      clearInterval(loadingInterval);
-    } else {
-      progress += progressStep;
-      progressBar.style.width = `${progress}%`;
-      progressText.textContent = `${Math.round(progress)}%`;
+  function animate(time) {
+    if (!startTime) startTime = time;
+
+    let elapsedTime = time - startTime;
+
+    let currentStep = Math.min(
+      Math.floor((elapsedTime / duration) * totalCircles),
+      totalCircles
+    );
+
+    for (let i = 0; i < currentStep; i++) {
+      circles[i].style.opacity = '1';
+      circles[i].style.transform = 'scale(1)';
+      circles[i].style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     }
-  }, progressInterval);
+
+    progress = Math.min((elapsedTime / duration) * maxProgress, maxProgress);
+    progressBar.style.width = `${progress}%`;
+    progressText.textContent = `${Math.round(progress)}%`;
+
+    if (progress < maxProgress) {
+      requestAnimationFrame(animate);
+    }
+  }
+  requestAnimationFrame(animate);
 });
