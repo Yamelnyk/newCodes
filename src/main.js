@@ -1,1 +1,2 @@
-import './js/preloader.js';
+// import './js/preloader.js';
+import './js/header.js';

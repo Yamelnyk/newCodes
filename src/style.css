@@ -1,4 +1,7 @@
-@import url(./css/preloader.css); /* ============== COMMON STYLES ============== */
+/* @import url(./css/preloader.css); */
+@import url(./css/header.css);
+
+/* ============== COMMON STYLES ============== */
 @font-face {
   font-family: 'Krylon';
   src: url('./fonts/Krylon-Regular.woff2') format('woff2');
@@ -22,6 +25,7 @@
   );
 
   --off-white-01: #fdfdfd;
+  --off-white-02: #efefef;
   --off-white-04: #d3d3d3;
   --black-01: #747474;
   --black-06: #232323;
@@ -42,6 +46,7 @@ img {
 a {
   text-decoration: none;
   display: block;
+  color: inherit;
 }
 
 ul {
@@ -69,6 +74,10 @@ body {
   line-height: 150%;
 } */
 
+body {
+  background: var(--off-white-02);
+}
+
 input {
   font-family: inherit;
 }
@@ -84,6 +93,32 @@ input {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.menu-open body {
+  overflow: hidden;
+}
+
+.wrapper {
+  background: var(--off-white-02);
+}
+
+.container {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1161px) {
+  .container {
+    padding-top: 24px;
+  }
 }
 
 /* ============== /COMMON STYLES ============== */
