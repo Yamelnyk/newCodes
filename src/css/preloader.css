@@ -11,7 +11,7 @@
   justify-content: space-between;
 }
 
-.wrapper {
+.wrapper-rectangle {
   height: 560px;
   border-radius: 40px;
   background: var(--gradient-MAIN-2);
@@ -221,7 +221,7 @@
     text-align: center;
   }
 
-  .wrapper {
+  .wrapper-rectangle {
     width: 328px;
     height: 327px;
   }

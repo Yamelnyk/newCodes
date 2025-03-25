@@ -1,0 +1,131 @@
+.hero {
+  padding-top: 22px;
+}
+
+.secondary-title {
+  font-size: 32px;
+}
+
+.page-title {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-size: 56px;
+}
+
+.date {
+  text-align: center;
+  font-family: 'IBM Plex Mono';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+
+.address {
+  color: var(--black-01);
+  text-align: center;
+  font-family: 'IBM Plex Mono';
+  font-size: 14px;
+  font-style: normal;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+
+.invite-text {
+  color: var(--black-01);
+  text-align: center;
+  font-size: 14px;
+  line-height: 160%;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.hero-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 33px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.get-involved-tab {
+  border: 1px solid var(--off-white-04);
+}
+.hero-register-tab {
+  color: var(--off-white-01);
+  background: var(--black-06);
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.hero-wrapper-rectangle {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: var(--gradient-MAIN-2);
+  position: relative;
+}
+
+.rectangle-flower {
+  opacity: 0.4;
+}
+
+.female-img {
+  position: absolute;
+  inset: auto auto 0 auto;
+}
+@media screen and (max-width: 1160px) {
+  .hero-wrapper-desk {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1161px) {
+  .hero-wrapper-rectangle {
+    display: none;
+  }
+  .hero {
+    padding-top: 32px;
+  }
+  .hero-container {
+    background: var(--chrome-radial);
+    /* position: relative; */
+  }
+  .hero-wrapper-desk {
+    position: relative;
+  }
+  .bg-desk {
+    position: relative;
+    overflow: hidden;
+    /* width: 100%; */
+    /* z-index: 1;
+    inset: 0; */
+  }
+  .hero-flower-desk {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.3;
+    /* inset: 0;
+    overflow: hidden;
+    object-fit: contain; */
+  }
+
+  .female-img-desk {
+    /* object-fit: contain; */
+    z-index: 3;
+    position: absolute;
+    inset: 10% auto auto auto;
+  }
+}
