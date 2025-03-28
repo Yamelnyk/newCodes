@@ -107,8 +107,8 @@
 
   .hero-wrapper-desk {
     position: relative;
-    -webkit-mask-image: url('https://yamelnyk.github.io/newCodes/assets/bg-shape-1.svg');
-    mask-image: url('https://yamelnyk.github.io/newCodes/assets/bg-shape-1.svg');
+    -webkit-mask-image: url('/bg-shape-1.svg');
+    mask-image: url('/bg-shape-1.svg');
     -webkit-mask-size: cover;
     mask-size: cover;
     -webkit-mask-repeat: no-repeat;
