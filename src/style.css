@@ -102,7 +102,6 @@ input {
 
 .title {
   color: var(--black-06);
-  text-align: center;
   font-family: Krylon;
   font-weight: 400;
   line-height: 90%;
@@ -112,10 +111,13 @@ input {
 
 @media screen and (min-width: 768px) {
   .container {
+    max-width: 1440px;
     padding-top: 82px;
     padding-right: 40px;
     padding-bottom: 82px;
     padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
