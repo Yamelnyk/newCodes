@@ -1,0 +1,127 @@
+.discover-wrapper-rectangle {
+  width: 100%;
+  max-width: 514px;
+  max-height: 615px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  background: var(--gradient-MAIN-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-rectangle-flower {
+  opacity: 0.4;
+}
+
+.discover-female-img {
+  width: 80%;
+  position: absolute;
+  top: 5%;
+}
+
+.discover-secondary-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.discover-section-title {
+  font-size: 56px;
+  text-align: center;
+}
+
+.discover-text {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--off-white-04);
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.faq {
+  margin-top: 24px;
+}
+
+.faq-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ac-faq {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--off-white-04);
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.faq-ac-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  font-family: 'IBM Plex Mono';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.ac-trigger {
+  border: none;
+}
+.ac-trigger-svg {
+  display: none;
+}
+.ac-trigger-svg.active {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.ac-text {
+  visibility: hidden;
+  transition: max-height 0.6s ease-out;
+  transition: height, visibility;
+  overflow: hidden;
+}
+
+.is-active-faq.ac-faq > .ac-text {
+  visibility: visible;
+}
+
+@media screen and (min-width: 1161px) {
+  .discover-container {
+    background: var(--chrome-radial);
+    display: grid;
+    grid-template-columns: 1fr 38% 1fr;
+    gap: 15px;
+  }
+
+  .discover-secondary-title {
+    text-align: left;
+  }
+
+  .discover-section-title {
+    font-size: 120px;
+    text-align: left;
+  }
+  .discover-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 615px;
+  }
+
+  .discover-text {
+    margin: 0;
+  }
+  .faq {
+    margin: 0;
+  }
+}
