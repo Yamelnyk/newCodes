@@ -74,6 +74,7 @@
 
 .ac-trigger {
   border: none;
+  background-color: inherit;
 }
 .ac-trigger-svg {
   display: none;
