@@ -88,6 +88,12 @@
   position: absolute;
   inset: auto auto 0 auto;
 }
+@media screen and (min-width: 680px) and (max-width: 1160px) {
+  .page-title {
+    font-size: 80px;
+  }
+}
+
 @media screen and (max-width: 1160px) {
   .hero-wrapper-desk {
     display: none;

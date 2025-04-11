@@ -143,6 +143,11 @@
   color: var(--black-06);
   border: 1px solid var(--off-white-04);
 }
+@media screen and (min-width: 680px) and (max-width: 1160px) {
+  .speakers-section-title {
+    font-size: 80px;
+  }
+}
 
 @media screen and (max-width: 1160px) {
   .speakers-secondary-title,
@@ -157,9 +162,7 @@
   .speakers-text {
     text-align: center;
   }
-  /* .experts-items-mob {
-    border: 5px solid red;
-  } */
+
   .experts-items {
     display: none;
   }
@@ -234,5 +237,45 @@
   }
   .dropdown-input-hidden {
     display: none;
+  }
+  .experts-wrapper {
+    margin-bottom: 120px;
+  }
+
+  .speakers-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    width: 100vw;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .speaker-item {
+    flex: 0 0 auto;
+    width: 300px;
+    scroll-snap-align: start;
+  }
+
+  .speaker-item-img {
+    border-radius: 16px 16px 0 0;
+  }
+  .speaker-item-text {
+    position: static;
+    height: 150px;
+    z-index: 1;
+  }
+  .extra-text {
+    overflow: visible;
+    opacity: 1;
+    text-transform: none;
+    font-family: 'IBM Plex Sans';
+    max-height: 100%;
+  }
+  .speaker-trade {
+    text-transform: none;
+    font-family: 'IBM Plex Sans';
   }
 }

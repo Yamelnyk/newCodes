@@ -17,12 +17,14 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
       dropDownBtn.innerText = this.innerText;
       dropDownInput.value = this.dataset.value;
       dropDownList.classList.remove('dropdown-list-visible');
+      dropDownWrapper.classList.toggle('is-open');
     });
   });
 
   document.addEventListener('click', function (e) {
     if (e.target !== dropDownBtn) {
       dropDownList.classList.remove('dropdown-list-visible');
+      dropDownWrapper.classList.toggle('is-open');
     }
   });
 });

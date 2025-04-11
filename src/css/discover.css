@@ -95,6 +95,11 @@
 .is-active-faq.ac-faq > .ac-text {
   visibility: visible;
 }
+@media screen and (min-width: 680px) and (max-width: 1160px) {
+  .discover-section-title {
+    font-size: 80px;
+  }
+}
 
 @media screen and (min-width: 1161px) {
   .discover-container {
