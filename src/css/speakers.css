@@ -46,6 +46,7 @@
   align-items: center;
   text-align: center;
   transition: color 0.3s ease-out, border 0.3s ease-out;
+  cursor: pointer;
 }
 
 .experts-item.is-active {

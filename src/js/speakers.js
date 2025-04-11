@@ -29,9 +29,48 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   });
 });
 
-const expertsTabList = document.querySelector('.experts-item');
-const expertsItem = document.querySelectorAll('.experts-item');
+const expertsTabList = document.querySelector('.experts-items');
+const speakerItems = document.querySelectorAll('.speaker-item');
+const tabItems = expertsTabList.querySelectorAll('.experts-item');
+
 function filter() {
-  expertsTabList.addEventListener('click', event => {});
+  expertsTabList.addEventListener('click', event => {
+    const targetId = event.target.dataset.id;
+    const target = event.target;
+
+    if (target.classList.contains('experts-item')) {
+      tabItems.forEach(tabItem => tabItem.classList.remove('is-active'));
+      target.classList.add('is-active');
+    }
+
+    switch (targetId) {
+      case 'all':
+        getItems('speaker-item');
+        break;
+      case 'digital':
+        getItems('digital-artist');
+        break;
+      case 'nft':
+        getItems('nft-enthusiast');
+        break;
+      case 'fashion':
+        getItems('fashion-designer');
+
+        break;
+      case 'influencers':
+        getItems('influencer');
+        break;
+    }
+  });
 }
 filter();
+
+function getItems(className) {
+  speakerItems.forEach(item => {
+    if (item.classList.contains(className)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
