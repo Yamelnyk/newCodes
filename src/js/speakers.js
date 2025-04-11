@@ -28,3 +28,10 @@ document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
     }
   });
 });
+
+const expertsTabList = document.querySelector('.experts-item');
+const expertsItem = document.querySelectorAll('.experts-item');
+function filter() {
+  expertsTabList.addEventListener('click', event => {});
+}
+filter();
