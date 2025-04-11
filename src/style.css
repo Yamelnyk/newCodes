@@ -2,6 +2,7 @@
 @import url(./css/header.css);
 @import url(./css/hero.css);
 @import url(./css/discover.css);
+@import url(./css/speakers.css);
 
 /* ============== COMMON STYLES ============== */
 @font-face {
@@ -16,6 +17,17 @@
     #fdfdfd 70.59%,
     #efefef 100%
   );
+
+  --gradient-MAIN: linear-gradient(
+    94deg,
+    #c4d8f5 0.05%,
+    #ade2f2 34.31%,
+    #e5d0f1 62.63%,
+    #f3d7ea 85.03%,
+    #ecd1d1 99.3%,
+    #f5f5d9 111.38%
+  );
+
   --gradient-MAIN-2: linear-gradient(
     95deg,
     #c4d8f5 1.19%,
@@ -25,10 +37,20 @@
     #ecd1d1 106.36%,
     #f5f5d9 119.17%
   );
+  --gradient-vivid: linear-gradient(
+    90deg,
+    #5089de 11.98%,
+    #41b8de 39.06%,
+    #c794e7 61.46%,
+    #e566bb 79.17%,
+    #eb9090 88.54%,
+    #d9db6f 100%
+  );
 
   --off-white-01: #fdfdfd;
   --off-white-02: #efefef;
   --off-white-04: #d3d3d3;
+  --off-white-06: #b0b0b0;
   --black-01: #747474;
   --black-06: #232323;
 }
