@@ -70,7 +70,12 @@
 .speaker-item {
   position: relative;
   overflow: hidden;
+  display: none;
 }
+
+/* .speaker-item:nth-child(-n + 9) {
+  display: inline-block;
+} */
 
 .speaker-item-img {
   border-radius: 16px 16px 17px 17px;
@@ -301,5 +306,21 @@
   }
   .see-more-tab {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .speakers-section-title {
+    font-size: 56px;
+  }
+  .speakers-text {
+    font-size: 14px;
+  }
+
+  .experts-wrapper {
+    margin-bottom: 24px;
+  }
+  .speaker-blok-tab {
+    margin-top: 14px;
   }
 }
