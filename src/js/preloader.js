@@ -1,3 +1,4 @@
+let duration = 3000;
 document.addEventListener('DOMContentLoaded', function () {
   const circles = document.querySelectorAll('.circle');
   const progressBar = document.querySelector('.progress-bar');
@@ -6,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let progress = 0;
   let maxProgress = 100;
   let totalCircles = circles.length;
-  let duration = 4000;
 
   let startTime = null;
 
@@ -39,4 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
   //   document.getElementById('loader').style.display = 'none';
   //   document.getElementById('content').style.display = 'block';
   // }, duration);
+});
+
+const preloader = document.querySelector('.loader-container');
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    preloader.classList.add('is-loaded');
+    preloader.addEventListener('transitionend', () => {
+      preloader.remove();
+    });
+  }, duration);
 });

@@ -1,8 +1,24 @@
+body:has(.loader-container) {
+  overflow: hidden;
+}
 .loader-container {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
   background: var(--chrome-radial);
   padding-left: 40px;
   padding-right: 40px;
+  opacity: 1;
+  max-height: 100vh;
+  transition: opacity 1s ease-out;
 }
+
+.loader-container.is-loaded {
+  opacity: 0;
+  /* pointer-events: none; */
+}
+
 .loader-container-wrapper {
   display: grid;
   grid-template-columns: 1fr 560px 1fr;
