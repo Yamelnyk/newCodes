@@ -113,6 +113,7 @@ if (loadmoreBtn) {
     }
 
     currentItems += 3;
+    window.scrollBy({ top: 350 });
     handleLoadMoreVisibility();
   });
 }

@@ -35,10 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   requestAnimationFrame(animate);
-  // setTimeout(() => {
-  //   document.getElementById('loader').style.display = 'none';
-  //   document.getElementById('content').style.display = 'block';
-  // }, duration);
 });
 
 const preloader = document.querySelector('.loader-container');

@@ -29,6 +29,7 @@
 .discover-section-title {
   font-size: 56px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .discover-text {
@@ -94,6 +95,14 @@
 
 .is-active-faq.ac-faq > .ac-text {
   visibility: visible;
+}
+@media screen and (min-width: 550px) and (max-width: 1160px) {
+  .faq-ac-title {
+    gap: 40px;
+  }
+  .faq-ac-title > br {
+    display: none;
+  }
 }
 @media screen and (min-width: 680px) and (max-width: 1160px) {
   .discover-section-title {

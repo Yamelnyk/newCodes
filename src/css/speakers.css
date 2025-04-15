@@ -5,6 +5,7 @@
 
 .speakers-section-title {
   font-size: 120px;
+  text-transform: uppercase;
 }
 
 .speakers-text {
@@ -72,10 +73,6 @@
   overflow: hidden;
   display: none;
 }
-
-/* .speaker-item:nth-child(-n + 9) {
-  display: inline-block;
-} */
 
 .speaker-item-img {
   border-radius: 16px 16px 17px 17px;
@@ -305,7 +302,7 @@
     opacity: 1;
   }
   .see-more-tab {
-    display: none;
+    display: none !important;
   }
 }
 
