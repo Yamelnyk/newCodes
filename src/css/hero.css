@@ -12,7 +12,7 @@
   margin-bottom: 24px;
   font-size: 56px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .date {
@@ -50,9 +50,9 @@
   padding-top: 16px;
   padding-bottom: 16px;
   border-radius: 33px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: 520px; */
+  /* margin-left: auto;
+  margin-right: auto; */
   font-size: 14px;
   font-family: 'IBM Plex Mono';
   font-weight: 700;
@@ -89,9 +89,14 @@
   position: absolute;
   inset: auto auto 0 auto;
 }
-@media screen and (min-width: 680px) and (max-width: 1160px) {
+@media screen and (min-width: 680px) and (max-width: 900px) {
   .page-title {
     font-size: 80px;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1250px) {
+  .page-title {
+    font-size: 100px;
   }
 }
 
@@ -159,12 +164,13 @@
 
   .page-title {
     position: absolute;
-    bottom: -4%;
-    font-size: 170px;
+    bottom: -3%;
+    font-size: 168px;
     text-align: left;
     max-width: 578px;
     margin: 0;
     line-height: 90%;
+    text-transform: uppercase;
   }
 
   .address-wrapper {

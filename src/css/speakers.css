@@ -157,7 +157,13 @@
   color: var(--black-06);
   border: 1px solid var(--off-white-04);
 }
-@media screen and (min-width: 680px) and (max-width: 1160px) {
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .speakers-section-title {
+    font-size: 100px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 901px) {
   .speakers-section-title {
     font-size: 80px;
   }
@@ -169,8 +175,9 @@
     text-align: center;
   }
   .speakers-section-title {
-    font-size: 80px;
+    text-transform: capitalize;
   }
+
   .speakers-head-wrapper {
     flex-direction: column;
     gap: 40px;
