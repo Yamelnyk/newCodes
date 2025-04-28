@@ -4,6 +4,7 @@
 @import url(./css/discover.css);
 @import url(./css/speakers.css);
 @import url(./css/agenda.css);
+@import url(./css/news.css);
 
 /* ============== COMMON STYLES ============== */
 @font-face {
@@ -157,7 +158,7 @@ input {
   }
 }
 
-@media screen and (min-width: 1161px) {
+@media screen and (min-width: 1024px) {
   .container {
     max-width: 1440px;
   }

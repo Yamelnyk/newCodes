@@ -1,0 +1,240 @@
+.news-title-wrapper {
+  margin-bottom: 90px;
+}
+
+.news-wrapper {
+  margin-bottom: 80px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 17px;
+  grid-row-gap: 90px;
+}
+
+.news-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-item-img {
+  border-radius: 16px 16px 0 0;
+}
+.news-item-text {
+  position: relative;
+  background: var(--off-white-01);
+  border-radius: 0 0 16px 16px;
+  padding: 16px;
+  color: var(--black-06);
+
+  font-family: 'IBM Plex Mono';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+.news-item-data {
+  font-weight: 400;
+  margin-top: 40px;
+}
+
+.news-item:hover .news-item-text,
+.news-item:focus .news-item-text,
+.news-item:active .news-item-text {
+  background: var(--gradient-MAIN-2);
+}
+.view-all-tab {
+  width: 100%;
+}
+
+.insights-wrapper-mob {
+  display: none;
+}
+.insights-wrapper-desk {
+  margin-top: 120px;
+  position: relative;
+  -webkit-mask-image: url('/insights-bg.svg');
+  mask-image: url('/insights-bg.svg');
+  width: 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.insights-flower-desk {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+.insights-first-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 7%;
+
+  font-family: 'IBM Plex Mono';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.big-size {
+  font-size: 120px;
+  font-family: Krylon;
+  line-height: 90%;
+}
+
+.insights-second-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 31%;
+  right: 7%;
+
+  font-family: 'IBM Plex Mono';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1380px) {
+  .insights-second-text {
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .insights-second-text {
+    right: 3%;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .insights-first-text {
+    top: 9%;
+    left: 6%;
+  }
+  .insights-second-text {
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .big-size {
+    font-size: 100px;
+  }
+  .insights-second-text {
+    right: 6%;
+  }
+  .insights-first-text {
+    left: 7%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .insights-second-text {
+    right: 4%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .insights-second-text {
+    right: 2%;
+  }
+  .insights-first-text {
+    left: 6%;
+  }
+}
+@media screen and (max-width: 1045px) {
+  .insights-wrapper-desk {
+    display: none;
+  }
+
+  .insights-wrapper-mob {
+    display: block;
+    max-width: 514px;
+    margin-top: 120px;
+    position: relative;
+    -webkit-mask-image: url('/insights-bg-mob.svg');
+    mask-image: url('/insights-bg-mob.svg');
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .insights-flower-mob {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0.4;
+  }
+  .insights-first-text {
+    font-size: 42px;
+    left: 15%;
+  }
+
+  .big-size-400 {
+    font-size: 180px;
+    font-family: Krylon;
+    line-height: 90%;
+  }
+  .insights-second-text {
+    top: 59%;
+    left: 3%;
+    font-size: 42px;
+  }
+  .big-size-live {
+    font-size: 120px;
+    font-family: Krylon;
+    line-height: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .insights-first-text {
+    font-size: 24px;
+    left: 23%;
+    top: 13%;
+  }
+
+  .big-size-400 {
+    font-size: 120px;
+  }
+  .insights-second-text {
+    top: 62%;
+    font-size: 24px;
+  }
+  .big-size-live {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .insights-first-text {
+    left: 17%;
+    top: 10%;
+  }
+  .insights-second-text {
+    top: 59%;
+  }
+}
