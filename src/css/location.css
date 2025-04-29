@@ -1,0 +1,76 @@
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 38% 1fr;
+  grid-column-gap: 15px;
+  margin-bottom: 80px;
+}
+.google-map {
+  max-width: 408px;
+  max-height: 330px;
+  overflow: hidden;
+}
+
+.location-decor {
+  width: 100%;
+  max-width: 514px;
+  max-height: 951px;
+  border-radius: 32px;
+  background: var(--gradient-MAIN-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.location-decor-flower {
+  opacity: 0.4;
+}
+
+.location-decor-column {
+  /* width: 80%; */
+  position: absolute;
+  top: 5%;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.venue-image {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.location-content-title {
+  font-family: 'IBM Plex Mono';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.location-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--off-white-04);
+  border-radius: 16px;
+}
+
+.location-accessibility > p > span {
+  font-family: 'IBM Plex Mono';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 160%;
+  text-transform: uppercase;
+}
+
+.getting-there {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.google-map {
+  padding: 0;
+}

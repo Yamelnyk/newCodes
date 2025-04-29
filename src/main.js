@@ -4,3 +4,4 @@ import './js/discover.js';
 import './js/speakers.js';
 import './js/agenda.js';
 import './js/news.js';
+import './js/location.js';
