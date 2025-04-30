@@ -4,6 +4,10 @@
   grid-column-gap: 15px;
   margin-bottom: 80px;
 }
+.agenda-secondary-title > br,
+.agenda-section-title > br {
+  display: none;
+}
 .google-map {
   max-width: 408px;
   max-height: 330px;
@@ -25,7 +29,6 @@
 }
 
 .location-decor-column {
-  /* width: 80%; */
   position: absolute;
   top: 5%;
 }
@@ -34,6 +37,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 .venue-image {
   border-radius: 16px;
@@ -73,4 +78,49 @@
 
 .google-map {
   padding: 0;
+}
+
+@media screen and (max-width: 1180px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+  .location-info,
+  .location-grid {
+    gap: 24px;
+  }
+
+  .getting-there {
+    gap: 24px;
+  }
+
+  .location-content-title > br {
+    display: none;
+  }
+  .location-decor {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .google-map {
+    max-width: 100%;
+  }
+  .location-accessibility {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 562px) and (max-width: 1180px) {
+  .venue-image {
+    width: 514px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .location-text {
+    font-size: 14px;
+  }
+  .agenda-secondary-title > br,
+  .agenda-section-title > br {
+    display: block;
+  }
 }

@@ -1,6 +1,9 @@
 .news-title-wrapper {
   margin-bottom: 90px;
 }
+.news-section-title > br {
+  display: none;
+}
 
 .news-wrapper {
   margin-bottom: 80px;
@@ -50,7 +53,7 @@
 .view-all-tab {
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 917px) {
   .news-wrapper {
     margin-bottom: 40px;
   }
@@ -271,5 +274,11 @@
   }
   .insights-second-text {
     top: 58%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-section-title > br {
+    display: block;
   }
 }
