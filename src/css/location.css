@@ -62,7 +62,8 @@
   border-radius: 16px;
 }
 
-.location-accessibility > p > span {
+.location-accessibility > p > a {
+  display: inline;
   font-family: 'IBM Plex Mono';
   font-size: 14px;
   font-weight: 700;
