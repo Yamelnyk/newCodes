@@ -31,7 +31,7 @@
   max-height: 200px;
 }
 
-@media screen and (min-width: 1160px) {
+@media screen and (min-width: 1161px) {
   .dates-wrapper {
     position: sticky;
     top: 130px;
