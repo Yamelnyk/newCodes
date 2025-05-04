@@ -1,7 +1,7 @@
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 205px);
+  grid-auto-rows: 205px;
   gap: 15px;
 }
 
@@ -60,10 +60,31 @@
   transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
   overflow: hidden;
 }
-.partner-item-wrap:hover .partner-item-name {
-  opacity: 1;
-  max-height: 100px;
-  transform: translateY(0);
+@media screen and (min-width: 768px) {
+  .see-all-tab {
+    display: none;
+  }
+  .partner-item-wrap:hover .partner-item-name {
+    opacity: 1;
+    max-height: 100px;
+    transform: translateY(0);
+  }
+  .partner-item-wrap:hover {
+    background: var(--gradient-MAIN-2);
+    border: 0;
+  }
+
+  .partner-item-wrap:hover .partner-gradient-overlay {
+    opacity: 1;
+  }
+
+  .partner-item-wrap:hover .partner-logo {
+    opacity: 0;
+  }
+
+  .partner-item-wrap:hover .partner-logo-black {
+    opacity: 1;
+  }
 }
 
 .partner-gradient-overlay {
@@ -80,19 +101,42 @@
   z-index: 2;
 }
 
-.partner-item-wrap:hover {
-  background: var(--gradient-MAIN-2);
-  border: 0;
+@media screen and (max-width: 1160px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .item {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 205px);
+  }
 }
 
-.partner-item-wrap:hover .partner-gradient-overlay {
-  opacity: 1;
+@media screen and (max-width: 767px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 205px);
+    margin-bottom: 40px;
+  }
+  .last-item,
+  .partner-gradient-overlay {
+    display: none;
+  }
+  .see-all-tab {
+    width: 100%;
+  }
 }
-
-.partner-item-wrap:hover .partner-logo {
-  opacity: 0;
+@media screen and (max-width: 500px) {
+  .partners-grid {
+    grid-auto-rows: 170px;
+  }
 }
-
-.partner-item-wrap:hover .partner-logo-black {
-  opacity: 1;
+@media screen and (max-width: 400px) {
+  .partners-grid {
+    grid-auto-rows: 128px;
+  }
 }
