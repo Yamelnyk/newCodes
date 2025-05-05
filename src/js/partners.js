@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   const partnerItems = document.querySelectorAll('.partner-item');
-  const seeAllPartnersBtn = document.querySelector('.see-all-tab');
+  const seeAllBtn = document.querySelector('.see-all-tab');
   const initialVisiblePartners = 8;
 
-  const updatePartnersVisibility = () => {
+  const showItems = () => {
     if (window.innerWidth <= 767) {
-      partnerItems.forEach((item, index) => {
-        item.style.display = index < initialVisiblePartners ? 'block' : 'none';
-      });
-      seeAllPartnersBtn.style.display = 'block';
+      if (seeAllBtn.dataset.expanded === 'true') {
+        partnerItems.forEach((item, index) => {
+          item.style.display =
+            index < initialVisiblePartners ? 'block' : 'none';
+        });
+        seeAllPartnersBtn.style.display = 'block';
+      }
     } else {
       partnerItems.forEach(item => {
         item.style.display = 'block';
@@ -17,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  seeAllPartnersBtn.addEventListener('click', () => {
+  seeAllBtn.addEventListener('click', () => {
     partnerItems.forEach(item => {
       item.style.display = 'block';
     });
-    seeAllPartnersBtn.style.display = 'none';
+    seeAllBtn.style.display = 'none';
   });
 
-  updatePartnersVisibility();
-  window.addEventListener('resize', updatePartnersVisibility);
+  window.addEventListener('resize', showItems);
+  showItems();
 });
