@@ -1,30 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const partnerItems = document.querySelectorAll('.partner-item');
   const seeAllBtn = document.querySelector('.see-all-tab');
-  const initialVisiblePartners = 8;
+  const initialVisible = 8;
 
   const showItems = () => {
-    if (window.innerWidth <= 767) {
-      if (seeAllBtn.dataset.expanded === 'true') {
-        partnerItems.forEach((item, index) => {
-          item.style.display =
-            index < initialVisiblePartners ? 'block' : 'none';
-        });
-        seeAllPartnersBtn.style.display = 'block';
-      }
-    } else {
-      partnerItems.forEach(item => {
-        item.style.display = 'block';
-      });
-      seeAllPartnersBtn.style.display = 'none';
-    }
+    const isMobile = window.innerWidth <= 767;
+    const isExpanded = seeAllBtn.dataset.expanded === 'true';
+
+    partnerItems.forEach((item, index) => {
+      item.style.display =
+        !isMobile || isExpanded || index < initialVisible ? 'block' : 'none';
+    });
+
+    seeAllBtn.style.display = isMobile && !isExpanded ? 'block' : 'none';
   };
 
   seeAllBtn.addEventListener('click', () => {
-    partnerItems.forEach(item => {
-      item.style.display = 'block';
-    });
-    seeAllBtn.style.display = 'none';
+    seeAllBtn.dataset.expanded = 'true';
+    showItems();
   });
 
   window.addEventListener('resize', showItems);
