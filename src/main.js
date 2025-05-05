@@ -7,3 +7,4 @@ import './js/news.js';
 import './js/location.js';
 import './js/register.js';
 import './js/partners.js';
+import './js/getInvolved.js';
