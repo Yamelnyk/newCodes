@@ -9,6 +9,7 @@
 @import url(./css/register.css);
 @import url(./css/partners.css);
 @import url(./css/getInvolved.css);
+@import url(./css/footer.css);
 
 /* ============== COMMON STYLES ============== */
 @font-face {
@@ -59,6 +60,7 @@
   --off-white-06: #b0b0b0;
   --black-01: #747474;
   --black-06: #232323;
+  --black-0625: #23232340;
 }
 
 * {
@@ -150,12 +152,19 @@ input {
   text-align: center;
 }
 
+.news-container,
+.register-container,
+.partners-container {
+  padding-top: 20px;
+}
+.footer-container {
+  padding-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 1024px;
-    padding-top: 82px;
     padding-right: 40px;
-    padding-bottom: 82px;
     padding-left: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -165,6 +174,13 @@ input {
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 1440px;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+  .news-container,
+  .register-container,
+  .partners-container {
+    padding-top: 82px;
   }
 }
 
