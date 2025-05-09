@@ -76,7 +76,7 @@
   gap: 40px;
 }
 
-.agenda-block {
+/* .agenda-block {
   position: relative;
   overflow: hidden;
   padding: 24px 24px 48px;
@@ -85,7 +85,24 @@
   grid-gap: 24px;
   border-radius: 16px;
   border: 1px solid var(--off-white-04);
+} */
+.agenda-block-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 24px 48px;
+  border-radius: 16px;
+  border: 1px solid var(--off-white-04);
 }
+
+.agenda-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.6fr 1.8fr 0.9fr;
+  grid-gap: 24px;
+
+  z-index: 2;
+}
+
 .agenda-see-more-tab {
   display: none;
 }
@@ -124,7 +141,7 @@
   text-align: right;
 }
 @media screen and (min-width: 768px) {
-  .agenda-block:hover {
+  .agenda-block-wrapper:hover {
     background: var(--gradient-MAIN);
   }
   .agenda-flower {
@@ -134,8 +151,12 @@
     pointer-events: none;
   }
 
-  .agenda-block:hover .agenda-flower {
-    opacity: 0.25;
+  .agenda-block-wrapper:hover .agenda-flower {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 1;
   }
 }
 
@@ -176,7 +197,7 @@
 @media screen and (max-width: 920px) {
   .agenda-block {
     grid-template-columns: 1fr;
-    padding-bottom: 24px;
+    /* padding-bottom: 24px; */
   }
   .content-title {
     font-size: 14px;
@@ -187,6 +208,16 @@
     gap: 16px;
     align-items: normal;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .topic-content {
+    margin-bottom: 24px;
+  }
+  .agenda-block-wrapper {
+    padding: 16px 16px 24px;
+  }
+
   .agenda-see-more-tab {
     display: flex;
     justify-content: center;
@@ -203,9 +234,7 @@
     color: var(--black-06);
     width: 100%;
   }
-}
 
-@media screen and (max-width: 768px) {
   .agenda-flower {
     display: none;
   }
@@ -238,9 +267,6 @@
     display: block;
   }
 
-  .topic-content {
-    margin-bottom: 24px;
-  }
   .agenda-block.expanded {
     display: grid;
   }

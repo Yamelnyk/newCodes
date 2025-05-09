@@ -118,7 +118,6 @@
 @media screen and (max-width: 767px) {
   .partners-grid {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 40px;
   }
   .last-item,
   .partner-gradient-overlay {
@@ -126,6 +125,7 @@
   }
   .see-all-tab {
     width: 100%;
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 500px) {

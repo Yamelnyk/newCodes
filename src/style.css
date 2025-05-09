@@ -182,6 +182,9 @@ input {
   .partners-container {
     padding-top: 82px;
   }
+  .footer-container {
+    padding-bottom: 40px;
+  }
 }
 
 /* ============== /COMMON STYLES ============== */
