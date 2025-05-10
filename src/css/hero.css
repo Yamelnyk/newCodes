@@ -239,3 +239,20 @@
     padding-left: 86px;
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  .animation-hero {
+    animation: animation-hero 0.8s ease-out 3s forwards;
+  }
+
+  @keyframes animation-hero {
+    from {
+      scale: 0.5;
+      opacity: 0;
+    }
+
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}

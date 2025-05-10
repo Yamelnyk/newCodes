@@ -250,3 +250,20 @@ body:has(.loader-container) {
     flex-direction: row-reverse;
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  .animation-loader {
+    animation: animation-loader 0.8s ease-out forwards;
+  }
+
+  @keyframes animation-loader {
+    from {
+      scale: 0.5;
+      opacity: 0;
+    }
+
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}

@@ -283,3 +283,23 @@
     display: block;
   }
 }
+@media (prefers-reduced-motion: no-preference) {
+  .animation-item {
+    animation: fade-img ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes fade-img {
+    from {
+      scale: 0.5;
+      opacity: 0;
+    }
+
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}

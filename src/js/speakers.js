@@ -1,5 +1,3 @@
-import AOS from 'aos';
-
 const speakerItems = document.querySelectorAll('.speaker-item');
 const loadmoreBtn = document.querySelector('.see-more-tab');
 let currentItems = 9;
@@ -85,7 +83,6 @@ function getItems(className) {
       item.style.display = 'none';
     }
   });
-  AOS.refresh();
   handleLoadMoreVisibility();
 }
 
@@ -118,8 +115,6 @@ if (loadmoreBtn) {
     currentItems += 3;
     window.scrollBy({ top: 350 });
     handleLoadMoreVisibility();
-
-    AOS.refresh();
   });
 }
 
