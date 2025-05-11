@@ -293,12 +293,12 @@
 
   @keyframes fade-img {
     from {
-      scale: 0.5;
+      transform: scale(0.5);
       opacity: 0;
     }
 
     to {
-      scale: 1;
+      transform: scale(1);
       opacity: 1;
     }
   }

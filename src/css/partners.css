@@ -139,23 +139,23 @@
   }
 }
 
-/* @media (prefers-reduced-motion: no-preference) { */
-.animation-partner {
-  animation: animation-partner ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-  animation-iteration-count: 1;
-}
-
-@keyframes animation-partner {
-  from {
-    scale: 0.5;
-    opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  .animation-partner {
+    animation: animation-partner ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-iteration-count: 1;
   }
 
-  to {
-    scale: 1;
-    opacity: 1;
+  @keyframes animation-partner {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }
-/* } */
