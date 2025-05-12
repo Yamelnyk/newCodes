@@ -1,8 +1,10 @@
-const speakerItems = document.querySelectorAll('.speaker-item');
+import observeItems from './observer.js';
+let speakerItems = document.querySelectorAll('.speaker-item');
 const loadmoreBtn = document.querySelector('.see-more-tab');
 let currentItems = 9;
 
 let activeClass = 'speaker-item';
+observeItems('.speaker-item[style*="inline-block"]');
 
 document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
   const dropDownBtn = dropDownWrapper.querySelector('.dropdown-button');
@@ -76,6 +78,7 @@ function filterSpeakersByCategory(category) {
 function getItems(className) {
   let count = 0;
   speakerItems.forEach(item => {
+    item.classList.remove('animate');
     if (className === 'speaker-item' || item.classList.contains(className)) {
       count++;
       item.style.display = count <= currentItems ? 'inline-block' : 'none';
@@ -84,6 +87,8 @@ function getItems(className) {
     }
   });
   handleLoadMoreVisibility();
+  speakerItems = document.querySelectorAll('.speaker-item');
+  observeItems('.speaker-item[style*="inline-block"]');
 }
 
 function handleLoadMoreVisibility() {
@@ -109,12 +114,14 @@ if (loadmoreBtn) {
     const nextItems = currentItems + 3;
 
     for (let i = currentItems; i < nextItems && i < matchingItems.length; i++) {
+      matchingItems[i].classList.remove('animate');
       matchingItems[i].style.display = 'inline-block';
     }
 
     currentItems += 3;
     window.scrollBy({ top: 350 });
     handleLoadMoreVisibility();
+    observeItems('.speaker-item[style*="inline-block"]');
   });
 }
 

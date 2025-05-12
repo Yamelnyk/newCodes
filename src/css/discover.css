@@ -151,3 +151,14 @@
     font-size: 120px;
   }
 }
+
+.discover-wrapper-rectangle {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.discover-wrapper-rectangle.animate {
+  opacity: 1;
+  transform: scale(1);
+}
