@@ -61,7 +61,8 @@
   font-weight: 400;
 }
 
-.dates.active-dates {
+.first-day.active-dates,
+.second-day.active-dates {
   color: var(--black-06);
   border-color: var(--black-06);
 }

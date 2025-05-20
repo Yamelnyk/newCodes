@@ -1,5 +1,3 @@
-// import observeItems from './observer.js';
-
 const newsItems = document.querySelectorAll('.news-item');
 const viewAllBtn = document.querySelector('.view-all-tab');
 
@@ -11,12 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
       item.style.display = 'none';
     }
   });
-  // observeItems('.news-item:not([style*="display: none"])');
   viewAllBtn.addEventListener('click', () => {
     newsItems.forEach(item => {
       item.style.display = 'block';
     });
     viewAllBtn.style.display = 'none';
-    // observeItems('.news-item');
   });
 });

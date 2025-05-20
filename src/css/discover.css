@@ -65,6 +65,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  cursor: pointer;
 
   font-family: 'IBM Plex Mono';
   font-size: 24px;

@@ -119,7 +119,7 @@ if (loadmoreBtn) {
     }
 
     currentItems += 3;
-    window.scrollBy({ top: 350 });
+    window.scrollBy({ top: 200 });
     handleLoadMoreVisibility();
     observeItems('.speaker-item[style*="inline-block"]');
   });

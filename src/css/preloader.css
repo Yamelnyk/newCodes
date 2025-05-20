@@ -217,6 +217,12 @@ body:has(.loader-container) {
 .circle-37 {
   inset: 12.5% auto auto 29.5%;
 }
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  .loader-container-wrapper {
+    height: 100%;
+    justify-content: space-around;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .loader-container {

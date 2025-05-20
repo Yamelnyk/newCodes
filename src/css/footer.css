@@ -83,6 +83,10 @@
   border: 1px solid var(--black-0625);
   border-radius: 16px;
 }
+.network-item:hover,
+.network-item:active {
+  border: 1px solid var(--black-06);
+}
 
 .network-link {
   display: flex;

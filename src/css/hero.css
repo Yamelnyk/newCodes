@@ -60,6 +60,11 @@
 .get-involved-tab {
   border: 1px solid var(--off-white-04);
 }
+
+.get-involved-tab:hover,
+.get-involved-tab:active {
+  border: 1px solid var(--black-06);
+}
 .hero-register-tab {
   color: var(--off-white-01);
   background: var(--black-06);
@@ -98,7 +103,9 @@
 }
 
 @media screen and (max-width: 1160px) {
-  .hero-wrapper-desk {
+  .hero-wrapper-desk,
+  .eye,
+  .overlay-ellipse {
     display: none;
   }
 }
@@ -109,6 +116,8 @@
   }
   .hero {
     padding-top: 32px;
+    position: relative;
+    overflow: hidden;
   }
   .hero-container {
     background: var(--chrome-radial);
@@ -139,6 +148,36 @@
     top: 82%;
     left: 51%;
     transform: translate(-50%, -50%);
+  }
+  .eye {
+    position: absolute;
+    width: 30px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease;
+    z-index: 3;
+  }
+
+  .left-eye {
+    top: 40.5%;
+    left: 44.5%;
+  }
+
+  .right-eye {
+    top: 40.5%;
+    right: 44.5%;
+  }
+
+  .overlay-ellipse {
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    width: 300px;
+    transform: scale(0);
+    z-index: 4;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
   }
 
   .hero-content-wrapper {
@@ -254,5 +293,97 @@
       transform: scale(1);
       opacity: 1;
     }
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .eye {
+    top: 41%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .eye {
+    top: 42%;
+  }
+}
+@media screen and (min-width: 1223px) {
+  .left-eye {
+    top: 39.5%;
+    left: 44.8%;
+  }
+
+  .right-eye {
+    top: 39.5%;
+  }
+
+  .overlay-ellipse {
+    left: 38%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .eye {
+    top: 40%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .eye {
+    top: 41%;
+  }
+  .right-eye {
+    right: 44.8%;
+  }
+  .left-eye {
+    left: 45%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .eye {
+    top: 36%;
+  }
+}
+
+@media screen and (min-width: 1340px) {
+  .left-eye {
+    top: 37%;
+    left: 45.5%;
+  }
+
+  .right-eye {
+    top: 37%;
+    right: 45%;
+  }
+}
+@media screen and (min-width: 1370px) {
+  .eye {
+    top: 37.5%;
+  }
+  .overlay-ellipse {
+    left: 39%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .left-eye {
+    top: 38%;
+    left: 45.5%;
+  }
+
+  .right-eye {
+    top: 38%;
+    right: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .eye {
+    top: 38.4%;
+  }
+  .left-eye {
+    left: 46%;
+  }
+  .right-eye {
+    right: 45.3%;
+  }
+  .overlay-ellipse {
+    left: 40%;
   }
 }

@@ -10,3 +10,5 @@ import './js/register.js';
 import './js/partners.js';
 import './js/getInvolved.js';
 import './js/footer.js';
+import './js/sectionsObserver.js';
+import './js/hero.js';
