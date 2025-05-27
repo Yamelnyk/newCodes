@@ -36,6 +36,12 @@ if (window.innerWidth > 1161) {
     },
   });
 
+  setTimeout(() => {
+    document.querySelectorAll('.animation-hero').forEach(el => {
+      el.classList.remove('animation-hero');
+    });
+  }, 4000);
+
   tl.to('.eye', {
     opacity: 1,
     scale: 0,
