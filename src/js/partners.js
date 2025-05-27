@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialVisible = 8;
 
   const showItems = () => {
-    const isMobile = window.innerWidth <= 767;
+    const isMobile = window.innerWidth <= 766;
     const isExpanded = seeAllBtn.dataset.expanded === 'true';
 
     partnerItems.forEach((item, index) => {

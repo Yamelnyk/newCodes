@@ -63,7 +63,7 @@
 .faq-ac-title {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   cursor: pointer;
 
